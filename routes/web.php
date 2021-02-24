@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CRUDController;
+use App\Http\Controllers\TutoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,12 @@ use App\Http\Controllers\CRUDController;
 |
 */
 
-Route::get('/', 'CRUDController@index')->name('home');
+Route::get('/', 'TutoresController@index')->name('homeIndex');
 
-Route::post('/', 'CRUDController@store')->name('home');
+Route::post('/', 'TutoresController@store')->name('homeStore');
+
+Route::post('/', 'TutoresController@create')->name('homeCreate');
+
+Route::post('/', 'TutoresController@update')->name('homeUpdate');
+
+Route::post('/', 'TutoresController@destroy')->name('homeDestroy');
